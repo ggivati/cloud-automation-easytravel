@@ -34,6 +34,12 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
+    - sli: cpu_pcr
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
 total_score:
     pass: 90%
     warning: 75%
