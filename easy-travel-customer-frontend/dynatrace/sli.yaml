@@ -1,6 +1,6 @@
 spec_version: 0.1.4
 indicators:
-    apdex: ""
+    apdex: metricSelector=builtin:apps.web.apdex.userType:splitBy():auto:names
     credit_reqs: entitySelector=type(SERVICE),entityName("CreditCardValidation")&metricSelector=builtin:service.requestCount.total:splitBy():auto:names
     failures_[embedded]: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,[embedded]))
     failures_AuthenticationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,AuthenticationService))
