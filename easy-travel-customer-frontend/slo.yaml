@@ -1,4 +1,4 @@
-spec_version: "1.0"
+spec_version: ""
 filter: {}
 comparison:
     compare_with: single_result
@@ -6,30 +6,174 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
-    - sli: response_time_p95
-      displayName: ""
-      pass:
-        - criteria:
-            - <600
-      warning:
-        - criteria:
-            - <=800
-      weight: 1
-      key_sli: false
-    - sli: error_rate
-      displayName: ""
-      pass:
-        - criteria:
-            - <5
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: throughput
+    - sli: host_mem
       displayName: ""
       pass: []
       warning: []
-      weight: 0
+      weight: 1
       key_sli: false
+    - sli: host_cpu
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: front_reqs_cnt
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: front_reqs_time
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 3
+      key_sli: false
+    - sli: apdex
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 4
+      key_sli: false
+    - sli: credit_reqs
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: failures_VerificationService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_ConfigurationService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_CustomerFrontendREST
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_EasyTravelWebserver:8999
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_IFinanceService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_Requests_executed_in_background_threads_of_IIS_app_pool_dotNetBackend_easyTravel_x64
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_EasytravelService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_BookingService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_easyTravel_Third_Party_Content_Server
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_Requests_executed_in_background_threads_of_com.dynatrace.easytravel.customer.frontend.jar_easyTravel_(x*)
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_EasyTravelWebserver:8079
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_EasyTravelWebserver:9079
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_JourneyService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_AuthenticationService
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_CreditCardValidation
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_easyTravel_Customer_Frontend
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_[embedded]
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_dotNetFrontend_easyTravel_x64:9000
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_Requests_executed_in_background_threads_of_com.dynatrace.easytravel.customer.frontend.rest.jar_easyTravel_(x*)
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_dotNetCommon.RemoteTime
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_easyTravelBusiness
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: failures_dotNetBackend_easyTravel_x64:9010
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: true
 total_score:
     pass: 90%
     warning: 75%
