@@ -32,6 +32,27 @@ objectives:
             - <90
       weight: 1
       key_sli: false
+    - sli: front_reqs_cnt
+      displayName: ""
+      pass:
+        - criteria:
+            - '>1000'
+      warning:
+        - criteria:
+            - '>600'
+            - '>-5%'
+      weight: 1
+      key_sli: false
+    - sli: front_reqs_time
+      displayName: ""
+      pass:
+        - criteria:
+            - <40
+      warning:
+        - criteria:
+            - <60
+      weight: 3
+      key_sli: false
     - sli: credit_reqs
       displayName: ""
       pass:
