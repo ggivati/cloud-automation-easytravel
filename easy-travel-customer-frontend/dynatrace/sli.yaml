@@ -24,7 +24,7 @@ indicators:
     failures_easyTravel_Customer_Frontend: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravel Customer Frontend))
     failures_easyTravel_Third_Party_Content_Server: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravel Third Party Content Server))
     failures_easyTravelBusiness: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravelBusiness))
-    front_reqs_cnt: ""
-    front_reqs_time: ""
+    front_reqs_cnt: entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.requestCount.total:splitBy():auto:names
+    front_reqs_time: MV2;MicroSecond;entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.response.time:splitBy():auto:names
     host_cpu: entitySelector=type(HOST),entityName("GCE - east-travel-win-host")&metricSelector=builtin:host.cpu.usage:splitBy():auto:names
     host_mem: entitySelector=type(HOST),entityName("GCE - east-travel-win-host")&metricSelector=builtin:host.mem.usage:splitBy():auto:names
