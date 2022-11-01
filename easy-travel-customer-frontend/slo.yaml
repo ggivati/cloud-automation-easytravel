@@ -156,16 +156,6 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: host_cpu
-      displayName: ""
-      pass:
-        - criteria:
-            - <80
-      warning:
-        - criteria:
-            - <90
-      weight: 1
-      key_sli: false
     - sli: host_mem
       displayName: ""
       pass: []
@@ -181,6 +171,16 @@ objectives:
         - criteria:
             - '>0.85'
       weight: 4
+      key_sli: false
+    - sli: host_cpu
+      displayName: ""
+      pass:
+        - criteria:
+            - <75
+      warning:
+        - criteria:
+            - <90
+      weight: 1
       key_sli: false
 total_score:
     pass: 90%
