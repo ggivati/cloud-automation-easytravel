@@ -2,8 +2,29 @@ spec_version: 0.1.4
 indicators:
     apdex: ""
     credit_reqs: entitySelector=type(SERVICE),entityName("CreditCardValidation")&metricSelector=builtin:service.requestCount.total:splitBy():auto:names
-    failures: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names
+    failures_[embedded]: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,[embedded]))
+    failures_AuthenticationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,AuthenticationService))
+    failures_BookingService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,BookingService))
+    failures_ConfigurationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,ConfigurationService))
+    failures_CreditCardValidation: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CreditCardValidation))
+    failures_CustomerFrontendREST: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CustomerFrontendREST))
+    failures_EasyTravelWebserver:8079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8079))
+    failures_EasyTravelWebserver:8999: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8999))
+    failures_EasyTravelWebserver:9079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:9079))
+    failures_EasytravelService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasytravelService))
+    failures_IFinanceService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,IFinanceService))
+    failures_JourneyService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,JourneyService))
+    failures_Requests_executed_in_background_threads_of_IIS_app_pool_dotNetBackend_easyTravel_x64: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,Requests executed in background threads of IIS app pool dotNetBackend_easyTravel_x64))
+    failures_Requests_executed_in_background_threads_of_com.dynatrace.easytravel.customer.frontend.jar_easyTravel_(x*): metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,Requests executed in background threads of com.dynatrace.easytravel.customer.frontend.jar easyTravel (x*)))
+    failures_Requests_executed_in_background_threads_of_com.dynatrace.easytravel.customer.frontend.rest.jar_easyTravel_(x*): metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,Requests executed in background threads of com.dynatrace.easytravel.customer.frontend.rest.jar easyTravel (x*)))
+    failures_VerificationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,VerificationService))
+    failures_dotNetBackend_easyTravel_x64:9010: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,dotNetBackend_easyTravel_x64:9010))
+    failures_dotNetCommon.RemoteTime: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,dotNetCommon.RemoteTime))
+    failures_dotNetFrontend_easyTravel_x64:9000: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,dotNetFrontend_easyTravel_x64:9000))
+    failures_easyTravel_Customer_Frontend: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravel Customer Frontend))
+    failures_easyTravel_Third_Party_Content_Server: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravel Third Party Content Server))
+    failures_easyTravelBusiness: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,easyTravelBusiness))
     front_reqs_cnt: entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.requestCount.total:splitBy():auto:names
-    front_reqs_time: entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.response.time:splitBy():auto:names
+    front_reqs_time: MV2;MicroSecond;entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.response.time:splitBy():auto:names
     host_cpu: entitySelector=type(HOST),entityName("ObservabilityDemo")&metricSelector=builtin:host.cpu.usage:splitBy():auto:names
     host_mem: entitySelector=type(HOST),entityName("ObservabilityDemo")&metricSelector=builtin:host.mem.usage:splitBy():auto:names
