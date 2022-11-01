@@ -21,7 +21,7 @@ objectives:
         - criteria:
             - '>0.85'
       weight: 4
-      key_sli: true
+      key_sli: false
     - sli: host_cpu
       displayName: ""
       pass:
