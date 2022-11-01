@@ -6,18 +6,6 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
-    - sli: host_mem
-      displayName: ""
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: host_cpu
-      displayName: ""
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
     - sli: front_reqs_cnt
       displayName: ""
       pass: []
@@ -29,12 +17,6 @@ objectives:
       pass: []
       warning: []
       weight: 3
-      key_sli: false
-    - sli: apdex
-      displayName: ""
-      pass: []
-      warning: []
-      weight: 4
       key_sli: false
     - sli: credit_reqs
       displayName: ""
@@ -174,6 +156,24 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
+    - sli: host_cpu
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: host_mem
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: apdex
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 4
+      key_sli: false
 total_score:
     pass: 90%
     warning: 75%
