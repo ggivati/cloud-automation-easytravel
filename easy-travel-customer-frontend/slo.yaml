@@ -158,8 +158,12 @@ objectives:
       key_sli: true
     - sli: host_cpu
       displayName: ""
-      pass: []
-      warning: []
+      pass:
+        - criteria:
+            - <80
+      warning:
+        - criteria:
+            - <90
       weight: 1
       key_sli: false
     - sli: host_mem
@@ -170,8 +174,12 @@ objectives:
       key_sli: false
     - sli: apdex
       displayName: ""
-      pass: []
-      warning: []
+      pass:
+        - criteria:
+            - '>0.95'
+      warning:
+        - criteria:
+            - '>0.85'
       weight: 4
       key_sli: false
 total_score:
