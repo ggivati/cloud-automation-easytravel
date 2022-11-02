@@ -191,14 +191,6 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: failures_Default_Web_Site:80
-      displayName: ""
-      pass:
-        - criteria:
-            - <2
-      warning: []
-      weight: 1
-      key_sli: true
     - sli: failures_[embedded]
       displayName: ""
       pass:
@@ -244,6 +236,14 @@ objectives:
       pass:
         - criteria:
             - <2
+      warning: []
+      weight: 1
+      key_sli: true
+    - sli: sec_issues
+      displayName: ""
+      pass:
+        - criteria:
+            - <5
       warning: []
       weight: 1
       key_sli: true
