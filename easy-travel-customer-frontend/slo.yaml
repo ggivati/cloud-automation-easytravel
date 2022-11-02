@@ -191,14 +191,6 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: failures_Default_Web_Site:80
-      displayName: ""
-      pass:
-        - criteria:
-            - <2
-      warning: []
-      weight: 1
-      key_sli: true
     - sli: failures_[embedded]
       displayName: ""
       pass:
@@ -247,16 +239,16 @@ objectives:
       warning: []
       weight: 1
       key_sli: true
-    - sli: sec_issues
+    - sli: Vulnerabilities_Free_Score
       displayName: ""
       pass:
         - criteria:
-            - <5
+            - '>=98.000000'
       warning:
         - criteria:
-            - <10
+            - '>=95.000000'
       weight: 1
-      key_sli: true
+      key_sli: false
 total_score:
     pass: 90%
     warning: 75%
