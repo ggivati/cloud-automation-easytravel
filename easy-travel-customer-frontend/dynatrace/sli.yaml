@@ -1,5 +1,6 @@
 spec_version: 0.1.4
 indicators:
+    Vulnerabilities_Free_Score: SLO;4a1b26f2-6511-3594-8686-fd2d5d1dea7c
     apdex: metricSelector=builtin:apps.web.apdex.userType:splitBy():auto:names
     credit_reqs: entitySelector=type(SERVICE),entityName("CreditCardValidation")&metricSelector=builtin:service.requestCount.total:splitBy():sum:names
     failures_[embedded]: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,[embedded]))
@@ -8,7 +9,6 @@ indicators:
     failures_ConfigurationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,ConfigurationService))
     failures_CreditCardValidation: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CreditCardValidation))
     failures_CustomerFrontendREST: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CustomerFrontendREST))
-    failures_Default_Web_Site:80: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,Default Web Site:80))
     failures_EasyTravelWebserver:8079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8079))
     failures_EasyTravelWebserver:8999: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8999))
     failures_EasyTravelWebserver:9079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:9079))
@@ -29,4 +29,3 @@ indicators:
     front_reqs_time: MV2;MicroSecond;entitySelector=type(SERVICE),entityName("easyTravel Customer Frontend")&metricSelector=builtin:service.response.time:splitBy():auto:names
     host_cpu: entitySelector=type(HOST),entityName("GCE - east-travel-win-host")&metricSelector=builtin:host.cpu.usage:splitBy():auto:names
     host_mem: entitySelector=type(HOST),entityName("GCE - east-travel-win-host")&metricSelector=builtin:host.mem.usage:splitBy():auto:names
-    sec_issues: metricSelector=builtin:security.securityProblem.open.global:splitBy():auto:names
