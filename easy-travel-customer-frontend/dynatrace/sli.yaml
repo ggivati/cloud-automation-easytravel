@@ -8,6 +8,7 @@ indicators:
     failures_ConfigurationService: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,ConfigurationService))
     failures_CreditCardValidation: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CreditCardValidation))
     failures_CustomerFrontendREST: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,CustomerFrontendREST))
+    failures_Default_Web_Site:80: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,Default Web Site:80))
     failures_EasyTravelWebserver:8079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8079))
     failures_EasyTravelWebserver:8999: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:8999))
     failures_EasyTravelWebserver:9079: metricSelector=builtin:service.errors.total.rate:splitBy("dt.entity.service"):auto:names:filter(eq(dt.entity.service,EasyTravelWebserver:9079))
